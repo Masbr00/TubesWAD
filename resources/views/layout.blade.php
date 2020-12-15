@@ -78,6 +78,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        {{-- Do Not Delete --}}
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown d-sm-block d-md-none">
@@ -89,6 +90,7 @@
                 </li>
             </ul>
         </div>
+        {{-- End of Do Not Delete --}}
         <div>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
@@ -109,27 +111,18 @@
                     <small style="color: white"><b>MAIN MENU</b></small>
                 </li>
                 {{-- menu 1 --}}
-                <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="fa fa-dashboard fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Beranda</span>
-                    </div>
+                <a href="home" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed"><i class="fa fa-dashboard mr-3"></i> Beranda</span>
                 </a>
                 {{-- end of menu 1 --}}
                 {{-- menu 2 --}}
-                <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="fa fa-dashboard fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Informasi SKPD</span>
-                    </div>
+                <a href="skpd" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed"><i class="fa fa-dashboard mr-3"></i> SKPD</span>
                 </a>
                 {{-- end of menu 2 --}}
                 {{-- menu 2 --}}
-                <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="fa fa-dashboard fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Visi, Misi, Moto</span>
-                    </div>
+                <a href="visi" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed"><i class="fa fa-dashboard mr-3"></i> Visi, Misi, Moto</span>
                 </a>
                 {{-- end of menu 2 --}}
 
@@ -142,10 +135,10 @@
                     </div>
                 </a>
                 <div id='submenu4' class="collapse sidebar-submenu">
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                    <a href="buatktp" class="list-group-item list-group-item-action bg-dark text-white">
                         <span class="menu-collapsed">Pembuatan KTP</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                    <a href="statusktp" class="list-group-item list-group-item-action bg-dark text-white">
                         <span class="menu-collapsed">Status Dokumen</span>
                     </a>
                 </div>
@@ -182,7 +175,7 @@
         </div>
 
         {{-- Isi dari konten akan ditampilkan disini --}}
-        @yield('kontent')
+        @yield('konten')
     </div>
     {{-- end of content --}}
 

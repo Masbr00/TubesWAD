@@ -19,3 +19,18 @@ Route::get('/', function () {
 Route::get('layout', function () {
     return view('layout');
 });
+Route::get('home', function () {
+    return view('home');
+});
+Route::get('skpd', function () {
+    return view('skpd');
+});
+Route::get('visi', function () {
+    return view('visi');
+});
+Route::get('buatktp', function () {
+    return view('buatktp');
+});
+Route::get('statusktp', function () {
+    return view('statusktp');
+});
