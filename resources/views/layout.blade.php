@@ -180,8 +180,19 @@
         <div class="mb-3 text-muted">
             <label>Laman : @yield('title')</label>
         </div>
+
+        {{-- Isi dari konten akan ditampilkan disini --}}
         @yield('kontent')
     </div>
     {{-- end of content --}}
+
+    {{-- footer --}}
+    <footer class="page-footer font-small blue bg-primary" style="width: 100%;">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#" style="color: black"> TelkomUniversity</a>
+        </div>
+    </footer>
+    {{-- end of footer --}}
 </body>
 </html>
