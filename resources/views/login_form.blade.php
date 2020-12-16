@@ -25,7 +25,7 @@
                         </div>
 
                         <h3>Sistem Informasi Pelayanan Publik</h3>
-                        <p>Kemudahan Akses Pelayanan Terpadu Untuk Masyarakat</p>
+                        <p>Kemudahan Akses Pelayanan Terpadu Untuk Masyarakat.</p>
                         <div class="error-warm">
                         <?php if(isset($_GET['error'])) { ?>
                             <h6 class="error"><?php echo $_GET['error']  ?> </h6>
