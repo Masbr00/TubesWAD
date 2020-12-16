@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/iofrm-style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/iofrm-theme10.css') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('asset/images/logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('asset/img/logo.png') }}">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                     <div class="form-items">
                         <div class="website-logo-inside">
                                 <div class="logo">
-                                     <img src="{{ asset('asset/images/logo.png') }}">
+                                     <img src="{{ asset('asset/img/logo.png') }}">
                                 </div>
 
 						</div>
