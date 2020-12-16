@@ -36,7 +36,14 @@ Route::get('statusktp', function () {
 });
 Route::get('login_form', function () {
     return view('login_form');
+<<<<<<< HEAD
 });
 Route::get('register', function () {
     return view('register');
 });
+=======
+});    
+Route::get('register', function () {
+    return view('register');
+});
+>>>>>>> e1b6e87576aead5c401020ab4408c206ac237676
