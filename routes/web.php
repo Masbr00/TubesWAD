@@ -34,3 +34,8 @@ Route::get('buatktp', function () {
 Route::get('statusktp', function () {
     return view('statusktp');
 });
+Route::get('login_form', function () {
+    return view('login_form');
+    
+Route::get('register', function () {
+    return view('register');
