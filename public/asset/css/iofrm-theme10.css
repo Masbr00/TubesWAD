@@ -43,7 +43,7 @@
 }
 
 .website-logo .logo {
-background-image: href="{{ asset('asset/images/logo.png') }}";
+background-image: href="{{ asset('asset/img/logo.png') }}";
 }
 
 .website-logo .logo img {
@@ -55,7 +55,7 @@ background-image: href="{{ asset('asset/images/logo.png') }}";
 }
 
 .website-logo-inside .logo {
-    background-image: href="{{ asset('asset/images/logo.png') }}";
+    background-image: href="{{ asset('asset/img/logo.png') }}";
 }
 
 .website-logo-inside .logo img {
@@ -494,10 +494,10 @@ background-image: href="{{ asset('asset/images/logo.png') }}";
     }
 
     .website-logo .logo {
-        background-image: href="{{ asset('asset/images/logo.png') }}";
+        background-image: href="{{ asset('asset/img/logo.png') }}";
     }
 
     .form-body.without-side .website-logo .logo {
-        background-image: href="{{ asset('asset/images/logo.png') }}";
+        background-image: href="{{ asset('asset/img/logo.png') }}";
     }
 }
