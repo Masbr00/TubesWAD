@@ -21,30 +21,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //web font -->
 </head>
 <body>
-	<!-- main -->
-	<div class="main-w3layouts wrapper">
-		<h1>Registrasi Diri</h1>
-		<div class="main-agileinfo">
-			<div class="agileits-top">
-				<form action="#" method="post">
-					<input class="text" type="text" name="Username" placeholder="Username" required="">
-					<input class="text email" type="email" name="email" placeholder="Email" required="">
-					<input class="text" type="password" name="password" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
-					<div class="wthree-text">
-						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
-							<span>I Agree To The Terms & Conditions</span>
-						</label>
-						<div class="clear"> </div>
-					</div>
-					<input type="submit" value="SIGNUP">
-				</form>
-				<p>Sudah memiliki account? <a href="#"> Login!</a></p>
-			</div>
-		</div>
-
-	</div>
-	<!-- //main -->
+    <!-- main -->
+    <div class="main-w3layouts wrapper">
+        <h1>Registrasi Diri</h1>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <form action="#" method="post">
+                    <input class="text w3lpass" type="text" name="nama" placeholder="Nama Lengkap" required="">
+                    <input class="text w3lpass" type="text" name="telp" placeholder="No. HP" required="">
+                    <input class="text w3lpass" type="text" name="jalan" placeholder="Nama Jalan, Nomor Jalan, Gang" required="">
+                    <input class="text w3lpass" type="text" name="rt_rw" placeholder="RT/RW" required="">
+                    <input class="text w3lpass" type="text" name="kelurahan" placeholder="Kelurahan" required="">
+                    <input class="text w3lpass" type="text" name="pos" placeholder="Kode Pos" required="">
+                    <input class="text w3lpass email" type="email" name="email" placeholder="Email" required="">
+                    <input class="text w3lpass" type="password" name="password" placeholder="Password" required="">
+                    <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+                    <div class="wthree-text">
+                        <label class="anim">
+                            <input type="checkbox" class="checkbox" required="">
+                            <span>I Agree To The Terms & Conditions</span>
+                            </label>
+                            <div class="clear"> </div>
+                    </div>
+                    <input type="submit" value="SIGNUP">
+                </form>
+                <p>Sudah memiliki account? <a href="login_form"> Login!</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- //main -->
 </body>
 </html>

@@ -20,7 +20,7 @@
                     <div class="form-items">
                         <div class="website-logo-inside">
                                 <div class="logo">
-                                     <img src="{{ asset('asset/img/logo.png') }}">
+                                    <img src="{{ asset('asset/img/logo.png') }}">
                                 </div>
 
 						</div>
@@ -39,7 +39,7 @@
                             <div class="form-button">
                                 <button href="layout.blade.php" id="submit" type="submit" class="ibtn">Login</button>
                             </div>
-							<p>Belum memiliki account? <a href="#"> Registrasi Disini!</a></p>
+							<p>Belum memiliki account? <a href="register"> Registrasi Disini!</a></p>
                         </form>
                     </div>
                 </div>
