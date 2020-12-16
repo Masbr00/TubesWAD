@@ -28,11 +28,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="agileits-top">
                 <form action="#" method="post">
                     <input class="text w3lpass" type="text" name="nama" placeholder="Nama Lengkap" required="">
-                    <input class="text w3lpass" type="text" name="telp" placeholder="No. HP" required="">
+                    <input class="text w3lpass number" type="number" name="telp" placeholder="No. HP" required="">
                     <input class="text w3lpass" type="text" name="jalan" placeholder="Nama Jalan, Nomor Jalan, Gang" required="">
                     <input class="text w3lpass" type="text" name="rt_rw" placeholder="RT/RW" required="">
                     <input class="text w3lpass" type="text" name="kelurahan" placeholder="Kelurahan" required="">
-                    <input class="text w3lpass" type="text" name="pos" placeholder="Kode Pos" required="">
+                    <input class="text w3lpass number" type="number" name="pos" placeholder="Kode Pos" required="">
                     <input class="text w3lpass email" type="email" name="email" placeholder="Email" required="">
                     <input class="text w3lpass" type="password" name="password" placeholder="Password" required="">
                     <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
@@ -45,7 +45,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <input type="submit" value="SIGNUP">
                 </form>
-                <p>Sudah memiliki account? <a href="login_form"> Login!</a></p>
+                <p>Sudah memiliki akun? <a href="login_form"> Login!</a></p>
             </div>
         </div>
     </div>

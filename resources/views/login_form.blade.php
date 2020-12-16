@@ -22,9 +22,8 @@
                                 <div class="logo">
                                     <img src="{{ asset('asset/img/logo.png') }}">
                                 </div>
+                        </div>
 
-						</div>
-						
                         <h3>Sistem Informasi Pelayanan Publik</h3>
                         <p>Kemudahan Akses Pelayanan Terpadu Untuk Masyarakat</p>
                         <div class="error-warm">
@@ -39,7 +38,7 @@
                             <div class="form-button">
                                 <button href="layout.blade.php" id="submit" type="submit" class="ibtn">Login</button>
                             </div>
-							<p>Belum memiliki account? <a href="register"> Registrasi Disini!</a></p>
+                            <p>Belum memiliki akun? <a href="register"> Registrasi Disini!</a></p>
                         </form>
                     </div>
                 </div>
