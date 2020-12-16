@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- Custom Theme files -->
 <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/colorlib.css') }}">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('asset/images/logo.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('asset/img/logo.png') }}">
 <!-- //Custom Theme files -->
 <!-- web font -->
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
