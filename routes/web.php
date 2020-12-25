@@ -19,27 +19,33 @@ Route::get('/', function () {
 Route::get('layout', function () {
     return view('layout');
 });
-Route::get('home', function () {
-    return view('home');
-});
-Route::get('skpd', function () {
-    return view('skpd');
-});
-Route::get('visi', function () {
-    return view('visi');
-});
-Route::get('buatktp', function () {
-    return view('buatktp');
-});
-Route::get('statusktp', function () {
-    return view('statusktp');
-});
 Route::get('login_form', function () {
     return view('login_form');
 });    
 Route::get('register', function () {
     return view('register');
 });
-Route::get('profile', function () {
-    return view('rprofile');
+
+// route untuk client side
+Route::get('home', function () {
+    return view('client/home');
 });
+Route::get('skpd', function () {
+    return view('client/skpd');
+});
+Route::get('visi', function () {
+    return view('client/visi');
+});
+Route::get('buatktp', function () {
+    return view('client/buatktp');
+});
+Route::get('statusktp', function () {
+    return view('client/statusktp');
+});
+Route::get('profile', function (){
+    return view('client/profile');
+});
+
+// route untuk admin side
+
+// route untuk experiment

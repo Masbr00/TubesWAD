@@ -98,6 +98,7 @@
                         Selamat Datang, <font style="color:white">Nama_User</font>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="profile">Profile</a>
                         <a class="dropdown-item" href="#">LogOut</a>
                     </div>
                 </li>
