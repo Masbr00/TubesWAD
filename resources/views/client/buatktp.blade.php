@@ -48,7 +48,7 @@
                 <option value="PNS">Kriten</option>
                 <option value="Swasta">Katolik</option>
                 <option value="Swasta">Hindu</option>
-                <option value="Swasta">Buda</option>
+                <option value="Swasta">Budha</option>
                 <option value="Swasta">Konghucu</option>
             </select>
         </div>
