@@ -1,13 +1,12 @@
-@extends('layout')
-@section('title', 'Status Dokumen')
+@extends('admin_layout')
+@section('title', 'List KTP Selesai')
 @section('konten')
 <!-- konten -->
-<h3>Status Dokumen</h3>
-<br>
+<h3>Daftar Pengajuan Dokumen</h3>
 <table class="table table-responsive table-hover">
     <thead class="thead-dark">
         <tr>
-            <th class="align-middle">No</th>
+            <th class="align-middle">No. </th>
             <th class="align-middle">ID Dokumen</th>
             <th class="align-middle">Nama Dokumen</th>
             <th class="align-middle">Nama Pengaju</th>
@@ -19,12 +18,12 @@
     <tbody>
         <tr>
             <td>1</td>
-            <td>2394523</td>
+            <td>423255</td>
             <td>Pengajuan Pembuatan KTP</td>
-            <td>Yayan Ruhian</td>
-            <td>1/1/2021</td>
-            <td>Mandiri</td>
-            <td>Dokumen Belum Selesai</td>
+            <td>Cecep Arif Rahman</td>
+            <td>2/10/2020</td>
+            <td>Pengiriman dengan jasa Go-Jek</td>
+            <td>Dokumen Selesai</td>
         </tr>
     </tbody>
 </table>

@@ -1,13 +1,12 @@
-@extends('layout')
-@section('title', 'Status Dokumen')
+@extends('admin_layout')
+@section('title', 'List KTP Belum Selesai')
 @section('konten')
 <!-- konten -->
-<h3>Status Dokumen</h3>
-<br>
+<h3>Daftar Pengajuan Dokumen</h3>
 <table class="table table-responsive table-hover">
     <thead class="thead-dark">
         <tr>
-            <th class="align-middle">No</th>
+            <th class="align-middle">No. </th>
             <th class="align-middle">ID Dokumen</th>
             <th class="align-middle">Nama Dokumen</th>
             <th class="align-middle">Nama Pengaju</th>

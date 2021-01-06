@@ -47,5 +47,32 @@ Route::get('profile', function (){
 });
 
 // route untuk admin side
+Route::get('admin_layout', function (){
+    return view('admin/admin_layout');
+});
+Route::get('admin_home', function () {
+    return view('admin/home');
+});
+Route::get('admin_profile', function (){
+    return view('client/profile');
+});
+Route::get('admin_skpd', function () {
+    return view('admin/skpd');
+});
+Route::get('admin_visi', function () {
+    return view('admin/visi');
+});
+Route::get('admin_buatktp', function () {
+    return view('admin/buatktp');
+});
+Route::get('daftar_dokumen', function () {
+    return view('admin/daftar_dokumen');
+});
+Route::get('ktp_selesai', function () {
+    return view('admin/ktp_selesai');
+});
+Route::get('ktp_belum_selesai', function () {
+    return view('admin/ktp_belum_selesai');
+});
 
 // route untuk experiment

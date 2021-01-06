@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('admin_layout')
 @section('title', 'Pembuatan KTP')
 @section('konten')
 <!-- konten -->

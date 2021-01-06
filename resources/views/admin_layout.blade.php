@@ -95,7 +95,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Selamat Datang, <font style="color:white">Nama_User</font>
+                        Selamat Datang, <font style="color:yellow"><b>Admin</b></font>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="profile">Profile</a>
@@ -111,7 +111,7 @@
                 <li class="list-group-item sidebar-separator-title d-flex align-items-center menu-collapsed">
                     <small style="color: white"><b>MAIN MENU</b></small>
                 </li>
-                
+
                 {{-- Menampilkan Waktu dan Tanggal --}}
                 <script type="text/javascript">
                     window.setTimeout("waktu()",1000);
@@ -146,17 +146,17 @@
                 {{-- end of menampilkan waktu dan tanggal --}}
 
                 {{-- menu 1 --}}
-                <a href="home" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="admin_home" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"><i class="fa fa-dashboard mr-3"></i> Beranda</span>
                 </a>
                 {{-- end of menu 1 --}}
                 {{-- menu 2 --}}
-                <a href="skpd" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="admin_skpd" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"><i class="fa fa-dashboard mr-3"></i> SKPD</span>
                 </a>
                 {{-- end of menu 2 --}}
                 {{-- menu 2 --}}
-                <a href="visi" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="admin_visi" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"><i class="fa fa-dashboard mr-3"></i> Visi, Misi, Moto</span>
                 </a>
                 {{-- end of menu 2 --}}
@@ -170,11 +170,17 @@
                     </div>
                 </a>
                 <div id='submenu4' class="collapse sidebar-submenu">
-                    <a href="buatktp" class="list-group-item list-group-item-action bg-dark text-white">
+                    <a href="admin_buatktp" class="list-group-item list-group-item-action bg-dark text-white">
                         <span class="menu-collapsed">Pembuatan KTP</span>
                     </a>
-                    <a href="statusktp" class="list-group-item list-group-item-action bg-dark text-white">
-                        <span class="menu-collapsed">Status Dokumen</span>
+                    <a href="daftar_dokumen" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Daftar Pengajuan KTP</span>
+                    </a>
+                    <a href="ktp_selesai" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">List KTP Selesai</span>
+                    </a>
+                    <a href="ktp_belum_selesai" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">List KTP Belum Selesai</span>
                     </a>
                 </div>
                 {{-- end of menu 4 --}}
@@ -206,6 +212,9 @@
     {{-- content --}}
     <div class="container col ml-2 mt-1">
         <div class="mb-3 text-muted">
+            <marquee class="bg-warning text-dark" behavior="alternate" onmouseout ="this.start()" 
+            onmouseover = "this.stop()" scrollamount="16" title="Saat ini anda sedang mengakses website menggunakan akun dengan kelas Admin">
+            Kelas Akses = Admin</marquee>
             <label>Laman : @yield('title')</label>
         </div>
 
@@ -215,7 +224,7 @@
     {{-- end of content --}}
 
     {{-- footer --}}
-    <footer class="page-footer font-small blue bg-primary" style="width: 100%;">
+    <footer class="page-footer font-small blue bg-warning" style="width: 100%;">
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a href="#" style="color: black"> TelkomUniversity</a>
