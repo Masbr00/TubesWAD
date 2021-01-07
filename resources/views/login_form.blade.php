@@ -1,3 +1,4 @@
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +37,7 @@
                             <input class="form-control" type="text" name="username" placeholder="E-mail Address" required>
                             <input class="form-control" type="password" name="password" placeholder="Password" required>
                             <div class="form-button">
-                                <button href="layout.blade.php" id="submit" type="submit" class="ibtn">Login</button>
+                                <button id="submit" name="login" type="submit" class="ibtn">Login</button>
                             </div>
                             <p>Belum memiliki akun? <a href="register"> Registrasi Disini!</a></p>
                         </form>

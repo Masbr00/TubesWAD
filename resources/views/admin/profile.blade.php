@@ -31,20 +31,6 @@
             </div>
     
             </div>
-            <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Kelurahan</label>
-            <div class="col-sm-10">
-            <input type="text" class="form-control" name="kelurahan" value="">
-            </div>
-    
-            </div>
-            <div class="form-group row">
-            <label class="col-sm-2 col-form-label">kode pos</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" name="kodepos" value="">
-            </div>
-    
-            </div>
             <hr>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Password</label>
@@ -54,9 +40,9 @@
     
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Password Confirm</label>
+                <label class="col-sm-2 col-form-label">Cek Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="cekpassword" require>
+                <input type="password" class="form-control" name="cek_password" require>
             </div>
     
             </div>
