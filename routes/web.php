@@ -19,13 +19,16 @@ Route::get('/', function () {
 Route::get('layout', function () {
     return view('layout');
 });
-Route::get('login_form', function () {
-    return view('login_form');
-});    
-Route::get('register', function () {
-    return view('register');
-});
-
+// Route::get('login_form', function () {
+//     return view('login_form');
+// });
+// Route::get('register', function () {
+//     return view('register');
+// });
+Route::get('register', 'App\Http\Controllers\AuthController@getRegister');
+Route::post('register', 'App\Http\Controllers\AuthController@PostRegister') -> name('register');
+Route::get('login', 'App\Http\Controllers\AuthController@getLogin');
+Route::post('login', 'App\Http\Controllers\AuthController@postLogin') -> name('login');
 // route untuk client side
 Route::get('home', function () {
     return view('client/home');

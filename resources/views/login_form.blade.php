@@ -1,4 +1,3 @@
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,11 +32,12 @@
                         <?php } 
                         ?>
                         </div>
-                        <form method="POST" action="login.php">
-                            <input class="form-control" type="text" name="username" placeholder="E-mail Address" required>
+                        <form method="post" action="{{ route('login') }}">
+                            {{csrf_field()}}
+                            <input class="form-control" type="text" name="username" placeholder="Username" required>
                             <input class="form-control" type="password" name="password" placeholder="Password" required>
                             <div class="form-button">
-                                <button id="submit" name="login" type="submit" class="ibtn">Login</button>
+                                <button type="submit" class="ibtn">Login</button>
                             </div>
                             <p>Belum memiliki akun? <a href="register"> Registrasi Disini!</a></p>
                         </form>

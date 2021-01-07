@@ -20,23 +20,18 @@
         <h1>Registrasi Diri</h1>
         <div class="main-agileinfo">
             <div class="agileits-top">
-                <form action="#" method="post">
-                    <input class="text w3lpass" type="text" name="nama" placeholder="Nama Lengkap" required>
-                    <input class="text w3lpass number" type="number" name="telp" placeholder="No. HP" required>
-                    <input class="text w3lpass" type="text" name="jalan" placeholder="Alamat" required>
+                <form method="post" action="{{ route('register') }}">
+                    {{csrf_field()}}
+                    <input class="text w3lpass" type="text" name="nama" placeholder="Nama Lengkap" value="{{ old('nama') }}" required>
+                    <input class="text w3lpass number" type="number" name="telp" placeholder="No. HP" value="{{ old('telp') }}" required>
+                    <input class="text w3lpass" type="text" name="alamat" placeholder="Alamat" value="{{ old('alamat') }}" required>
                     <input class="text w3lpass email" type="email" name="email" placeholder="Email" required>
+                    <input class="text w3lpass" type="text" name="username" placeholder="username" required>
                     <input class="text w3lpass" type="password" name="password" placeholder="Password" required>
-                    <input class="text w3lpass" type="password" name="cek_password" placeholder="Cek Password" required>
-                    <div class="wthree-text">
-                        <label class="anim">
-                            <input type="checkbox" class="checkbox" required="">
-                            <span>I Agree To The Terms & Conditions.</span>
-                            </label>
-                            <div class="clear"> </div>
-                    </div>
-                    <input type="submit" value="SIGNUP">
+                    <input class="text w3lpass" type="password" name="password_confirmation" placeholder="Cek Password" required>
+                    <input type="submit" value="Registrasi">
                 </form>
-                <p>Sudah memiliki akun? <a href="login_form"> Login!</a></p>
+                <p>Sudah memiliki akun? <a href="login"> Login!</a></p>
             </div>
         </div>
     </div>
