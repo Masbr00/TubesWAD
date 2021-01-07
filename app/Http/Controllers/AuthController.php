@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -13,7 +14,24 @@ class AuthController extends Controller
     }
 
     public function postLogin(Request $request){
-        dd('Login Berhasil');
+        $login = Auth::attempt(['username' => $request->username, 'password' => $request->password]);
+        $kelas = Auth::user() -> kelas;
+        if($login){
+            if($kelas == 'admin'){
+                return redirect()->route('admin_home');
+            }
+            else{
+                return redirect()->route('home');
+            }
+        }
+        else{
+            return redirect()->back();
+        }
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('get_login');
     }
 
     public function getRegister(){
@@ -39,6 +57,6 @@ class AuthController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        return redirect()->back();
+        return redirect()->route('login');
     }
 }

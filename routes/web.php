@@ -19,20 +19,18 @@ Route::get('/', function () {
 Route::get('layout', function () {
     return view('layout');
 });
-// Route::get('login_form', function () {
-//     return view('login_form');
-// });
-// Route::get('register', function () {
-//     return view('register');
-// });
-Route::get('register', 'App\Http\Controllers\AuthController@getRegister');
-Route::post('register', 'App\Http\Controllers\AuthController@PostRegister') -> name('register');
-Route::get('login', 'App\Http\Controllers\AuthController@getLogin');
-Route::post('login', 'App\Http\Controllers\AuthController@postLogin') -> name('login');
+// 
+
+Route::get('register', 'App\Http\Controllers\AuthController@getRegister') -> name('get_register') -> middleware('guest');
+Route::post('register', 'App\Http\Controllers\AuthController@PostRegister') -> name('register') -> middleware('guest');
+Route::get('login', 'App\Http\Controllers\AuthController@getLogin')-> name('get_login') -> middleware('guest');
+Route::post('login', 'App\Http\Controllers\AuthController@postLogin') -> name('login') -> middleware('guest');
+Route::get('logout', 'App\Http\Controllers\AuthController@logout') -> name('logout')  -> middleware('auth');
+
 // route untuk client side
 Route::get('home', function () {
     return view('client/home');
-});
+}) -> name('home') -> middleware('auth');
 Route::get('skpd', function () {
     return view('client/skpd');
 });
@@ -55,7 +53,7 @@ Route::get('admin_layout', function (){
 });
 Route::get('admin_home', function () {
     return view('admin/home');
-});
+})->name('admin_home') -> middleware('auth');
 Route::get('admin_profile', function (){
     return view('client/profile');
 });

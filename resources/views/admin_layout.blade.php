@@ -95,11 +95,11 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Selamat Datang, <font style="color:yellow"><b>Admin</b></font>
+                        Selamat Datang, <font style="color:yellow"><b>{{ Auth::user()->nama ?? '' }}</b></font>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="profile">Profile</a>
-                        <a class="dropdown-item" href="#">LogOut</a>
+                        <a class="dropdown-item" href="{{ route('logout') }}">LogOut</a>
                     </div>
                 </li>
             </ul>
