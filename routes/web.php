@@ -27,6 +27,9 @@ Route::get('login', 'App\Http\Controllers\AuthController@getLogin')-> name('get_
 Route::post('login', 'App\Http\Controllers\AuthController@postLogin') -> name('login') -> middleware('guest');
 Route::get('logout', 'App\Http\Controllers\AuthController@logout') -> name('logout')  -> middleware('auth');
 
+Route::get('dokumen/create', 'App\Http\Controllers\DokumenController@createDokumen');
+
+
 // route untuk client side
 Route::get('home', function () {
     return view('client/home');
@@ -77,3 +80,7 @@ Route::get('ktp_belum_selesai', function () {
 });
 
 // route untuk experiment
+Route::get('inputan', function () {
+    return view('experimen/inputan');
+});
+Route::get('inputan/create', 'App\Http\Controllers\InputanController@createInputan');

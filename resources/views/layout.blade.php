@@ -95,7 +95,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Selamat Datang, <font style="color:white">{{ Auth::user()->nama ?? ''}}
+                        Selamat Datang, <font style="color:white">{{ Auth::user()->nama ?? ''}} </font>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="profile">Profile</a>
