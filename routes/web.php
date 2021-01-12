@@ -29,7 +29,6 @@ Route::get('logout', 'App\Http\Controllers\AuthController@logout') -> name('logo
 
 Route::get('dokumen/create', 'App\Http\Controllers\DokumenController@createDokumen');
 
-
 // route untuk client side
 Route::get('home', function () {
     return view('client/home');
@@ -43,9 +42,11 @@ Route::get('visi', function () {
 Route::get('buatktp', function () {
     return view('client/buatktp');
 });
-Route::get('statusktp', function () {
-    return view('client/statusktp');
-});
+// Route::get('statusktp', function () {
+//     return view('client/statusktp');
+// });
+Route::get('statusktp', 'App\Http\Controllers\DokumenController@statusDokumenPelanggan');
+
 Route::get('profile', function (){
     return view('client/profile');
 });
@@ -80,7 +81,4 @@ Route::get('ktp_belum_selesai', function () {
 });
 
 // route untuk experiment
-Route::get('inputan', function () {
-    return view('experimen/inputan');
-});
-Route::get('inputan/create', 'App\Http\Controllers\InputanController@createInputan');
+

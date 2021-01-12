@@ -46,4 +46,9 @@ class DokumenController extends Controller
 
         return redirect()->back();
     }
+
+    public function statusDokumenPelanggan(){
+        $status = Dokumen::all();
+        return view ('client/statusktp', ['status' => $status]);
+    }
 }

@@ -5,50 +5,52 @@
     <div style="width: 80%">
         <h4 style="text-align: center">Profile</h4>
             <br>
-        <form action="#" method="get">
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Email</label>
-            </div>
-    
-            <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Nama</label>
-            <div class="col-sm-10">
-            <input type="text" class="form-control" name="nama" value="">
-            </div>
-    
-            </div>
-            <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Nomor Handphone</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" name="nohp" value="">
-            </div>
-    
-            </div>
-            <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Alamat</label>
-            <div class="col-sm-10">
-            <input type="text" class="form-control" name="alamat" value="">
-            </div>
-            <hr>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" name="password" require>
-            </div>
-    
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Cek Password</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" name="cek_password" require>
-            </div>
-    
-            </div>
-            <div class="form-group row">
-                <button type="submit" class="btn btn-dark btn-block" name="submit">Submit</button>
-                <button type="submit" class="btn btn-danger btn-block" name="submit">Batal</button>
-            </div>
-        </form>
+            <form>
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" value="{{ Auth::user()->email }}" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Nama Lengkap</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" value="{{ Auth::user()->nama }}">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Nomor Telp.</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" value="{{ Auth::user()->telp }}">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Alamat</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" value="{{ Auth::user()->alamat }}">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Konfirmasi Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" name="confirm_password">
+                    </div>
+                </div>
+
+                <input type="submit" name="submit" class="btn btn-warning btn-block btn-md" value="Edit Profil">
+                <input type="submit" name="cancel" class="btn btn-primary btn-block btn-md" value="Cancel">
+            </form>
     </div>
 </div>
 @endsection
