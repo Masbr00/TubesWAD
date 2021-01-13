@@ -2,9 +2,16 @@
 @section('title', 'Pembuatan KTP')
 @section('konten')
 <!-- konten -->
+@if (\Session::has('success'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+@endif
 <h3><center>Form Pembuatan KTP</center></h3>
 <div class="row justify-content-center">
-    <form action="dokumen/create" method="GET" style="width: 80%">
+    <form action="dokumen/create" method="GET" style="width: 80%" onsubmit="return confirm('Apakah anda ingin mengajukan dokumen?');">
         <input type="number" name="id_user" value="{{ Auth::user()->id}}" readonly hidden>
         <div class="form-group">
             <label>Nama Lengkap :</label>

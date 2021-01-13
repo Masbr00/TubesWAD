@@ -2,6 +2,13 @@
 @section('title', 'Status Dokumen')
 @section('konten')
 <!-- konten -->
+@if (\Session::has('success'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+@endif
 <h3>Status Dokumen</h3>
 <br>
 <table class="table table-responsive table-hover">
@@ -27,7 +34,7 @@
                 <td>{{ $p->created_at }}</td>
                 <td>{{ $p->pengiriman }}</td>
                 <td>{{ $p->status_dokumen }}</td>
-                <td><a href="dokumen/delete/{{ $p->id }}" class="btn btn-danger">Batalkan</a></td>
+                <td><a href="dokumen/delete/{{ $p->id }}" class="btn btn-danger" onclick="alert('Apakah anda yakin untuk membatalkan pengajuan dokumen ini?');">Batalkan</a></td>
             </tr>
         @endforeach
     </tbody>

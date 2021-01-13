@@ -45,7 +45,7 @@ class DokumenController extends Controller
             'pengiriman' => $request->pengiriman,
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Pengajuan dokumen anda telah berhasil dibuat');
     }
 
     public function statusDokumenPelanggan(){
@@ -57,6 +57,6 @@ class DokumenController extends Controller
     public function deleteDokumen($id){
         $hapus = Dokumen::find($id);
         $hapus->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Pengajuan dokumen telah berhasil dibatalkan');
     }
 }

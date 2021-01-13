@@ -30,6 +30,7 @@ Route::get('logout', 'App\Http\Controllers\AuthController@logout') -> name('logo
 Route::get('dokumen/create', 'App\Http\Controllers\DokumenController@createDokumen');
 Route::get('dokumen/delete/{id}', 'App\Http\Controllers\DokumenController@deleteDokumen');
 
+Route::get('edit/profile/{id}', 'App\Http\Controllers\ProfileController@editProfile');
 
 // route untuk client side
 Route::get('home', function () {
