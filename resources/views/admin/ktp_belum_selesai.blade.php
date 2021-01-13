@@ -16,15 +16,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>2394523</td>
-            <td>Pengajuan Pembuatan KTP</td>
-            <td>Yayan Ruhian</td>
-            <td>1/1/2021</td>
-            <td>Mandiri</td>
-            <td>Dokumen Belum Selesai</td>
-        </tr>
+        @foreach ($list as $p)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $p->id }}</td>
+                <td>Pengajuan Pembuatan KTP</td>
+                <td>{{ $p->nama_lengkap }}</td>
+                <td>{{ $p->created_at }}</td>
+                <td>{{ $p->pengiriman }}</td>
+                <td>{{ $p->status_dokumen }}</td>
+            </tr>
+        @endforeach
     </tbody>
 </table>
 <!-- end of konten -->

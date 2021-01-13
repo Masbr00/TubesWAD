@@ -59,4 +59,40 @@ class DokumenController extends Controller
         $hapus->delete();
         return redirect()->back()->with('success', 'Pengajuan dokumen telah berhasil dibatalkan');
     }
+
+    public function updateStatusDokumen($id, Request $request){
+        $update_status = "Dokumen Selesai";
+        $status = Dokumen::find($id);
+        $status->status_dokumen = $update_status;
+        $status->save();
+        return redirect()->back()->with('success', 'Status dokumen berhasil diupdate');
+    }
+
+    public function updateStatusDokumen2($id, Request $request){
+        $update_status = "Dokumen Belum Selesai";
+        $status = Dokumen::find($id);
+        $status->status_dokumen = $update_status;
+        $status->save();
+        return redirect()->back()->with('success', 'Status dokumen berhasil diupdate');
+    }
+
+    public function detailData($id){
+        $data = Dokumen::where('id',$id)->get();
+        return view ('admin/detaildata', ['data' => $data]);
+    }
+
+    public function daftarPengajuan(){
+        $list = Dokumen::all();
+        return view ('admin/daftar_dokumen', ['list' => $list]);
+    }
+
+    public function ktpBelumSelesai(){
+        $list = Dokumen::where('status_dokumen', 'Dokumen Belum Selesai')->get();
+        return view ('admin/ktp_belum_selesai', ['list' => $list]);
+    }
+
+    public function ktpSelesai(){
+        $list = Dokumen::where('status_dokumen', 'Dokumen Selesai')->get();
+        return view ('admin/ktp_selesai', ['list' => $list]);
+    }
 }

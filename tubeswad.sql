@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2021 at 03:38 PM
+-- Generation Time: Jan 13, 2021 at 02:49 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -87,10 +87,8 @@ CREATE TABLE `tabel_dokumen` (
 --
 
 INSERT INTO `tabel_dokumen` (`id`, `id_user`, `nama_lengkap`, `tgl_lahir`, `pl`, `alamat`, `rtrw`, `kelurahan`, `kecamatan`, `agama`, `nikah`, `pekerjaan`, `kewarganegaraan`, `pasfoto`, `kk`, `surat_pengantar`, `pengiriman`, `status_dokumen`, `created_at`, `updated_at`) VALUES
-(9, 1, 'Jody Mardika', '2000-05-23', 'laki-laki', 'Banyuwangi', '003/001', 'Tamanbaru', 'Tamanbaru', 'Pelajar', 'Belum Menikah', 'pelajar_mahasiswa', 'wni', '', '', '', 'mandiri', 'Dokumen Belum Selesai', '2021-01-12 03:34:23', '2021-01-12 03:34:23'),
-(11, 1, 'Jody Mardika', '2021-01-12', 'laki-laki', 'Banyuwangi', '003/001', 'Tamanbaru', 'Tamanbaru', 'Pelajar', 'Belum Menikah', 'pelajar_mahasiswa', 'wni', 'suten.png', '21454212581_KARTU_KELUARGA.jpg', 'cv.docx', 'mandiri', 'Dokumen Belum Selesai', '2021-01-12 05:42:51', '2021-01-12 05:42:51'),
-(12, 7, 'poiuio', '2021-01-08', 'wanita', 'Alamat', '003/001', 'Tamanbaru', 'Tamanbaru', 'Pelajar', 'Sudah Menikah', 'karyawan_bumn', 'wni', 'suten.png', '21454212581_KARTU_KELUARGA.jpg', 'cv.docx', 'mandiri', 'Dokumen Belum Selesai', '2021-01-12 06:32:31', '2021-01-12 06:32:31'),
-(13, 7, 'poiuio', '2021-01-01', 'wanita', 'Alamat', '003/001', 'Tamanbaru', 'Tamanbaru', 'Pelajar', 'Sudah Menikah', 'belum_kerja', 'wni', 'suten.png', '21454212581_KARTU_KELUARGA.jpg', 'cv.docx', 'mandiri', 'Dokumen Belum Selesai', '2021-01-12 06:34:30', '2021-01-12 06:34:30');
+(21, 8, 'Tester', '2021-01-13', 'laki-laki', 'Banyuwangi', '003/001', 'Tamanbaru', 'Tamanbaru', 'Pelajar', 'Belum Menikah', 'swasta', 'wni', 'suten.png', '21454212581_KARTU_KELUARGA.jpg', 'cv.docx', 'mandiri', 'Dokumen Belum Selesai', '2021-01-13 01:38:08', '2021-01-13 02:08:09'),
+(22, 4, 'Admin', '2021-01-13', 'laki-laki', 'Banyuwangi', '003/001', 'Tamanbaru', 'Tamanbaru', 'Pelajar', 'Belum Menikah', 'buruh', 'wni', 'suten.png', '21454212581_KARTU_KELUARGA.jpg', 'cv.docx', 'mandiri', 'Dokumen Belum Selesai', '2021-01-13 05:21:22', '2021-01-13 05:21:22');
 
 -- --------------------------------------------------------
 
@@ -120,7 +118,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `nama`, `telp`, `alamat`, `email`, `email_verified_at`, `username`, `password`, `kelas`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Jody Mardika', '081230873215', 'Banyuwangi', 'creepyzodiak@gmail.com', NULL, 'jodymardika', '$2y$10$Brn7SM4Wr68jYMh7vCwGmOb9iG2aTl65dmqqRHGUm6yToyx6l8ciS', 'pengguna', NULL, '2021-01-07 08:22:33', '2021-01-07 08:22:33'),
 (4, 'Admin', '0000', 'N/A', 'admin@gmail.com', NULL, 'admin', '$2y$10$z9fksMsseuAYHzer7OtPn.HZKqKtD8rUjZemrbIipma82uKkpFdS6', 'admin', NULL, '2021-01-07 09:25:28', '2021-01-07 09:25:28'),
-(7, 'poiuio', '011', 'na', 'na@gmail.com', NULL, 'nanana', '$2y$10$n2OuM6.OiPEARlH12.l7e.GLw6Re8MNg4F.PJH7xZw90eex7W4dfm', 'pengguna', NULL, '2021-01-12 03:35:01', '2021-01-12 03:35:01');
+(8, 'Tester', '011', 'N/A', 'na@gmail.com', NULL, 'tester', '$2y$10$dE9QImxfMh2uFQPkNxrYReqvFNLwyzKWt3qrfKf9sPeWQ/m3gK2Cm', 'pengguna', NULL, '2021-01-13 01:32:05', '2021-01-13 01:32:05');
 
 --
 -- Indexes for dumped tables
@@ -166,13 +164,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `tabel_dokumen`
 --
 ALTER TABLE `tabel_dokumen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

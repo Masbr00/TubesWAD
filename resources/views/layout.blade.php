@@ -99,7 +99,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="profile">Profile</a>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="alert('Apakah anda ingin keluar?');">LogOut</a>
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="return confirm('Apakah anda ingin keluar?');">LogOut</a>
                     </div>
                 </li>
             </ul>

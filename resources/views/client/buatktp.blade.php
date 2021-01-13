@@ -15,11 +15,11 @@
         <input type="number" name="id_user" value="{{ Auth::user()->id}}" readonly hidden>
         <div class="form-group">
             <label>Nama Lengkap :</label>
-            <input type="text" class="form-control" name="nama_lengkap">
+            <input type="text" class="form-control" name="nama_lengkap" value="{{Auth::user()->nama}}">
         </div>
 
         <div class="form-group">
-            <label>Tempat/Tgl Lahir :</label>
+            <label>Tgl Lahir :</label>
             <input type="date" name="tgl_lahir" class="form-control">
         </div>
 

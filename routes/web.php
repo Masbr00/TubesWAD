@@ -19,7 +19,6 @@ Route::get('/', function () {
 Route::get('layout', function () {
     return view('layout');
 });
-// 
 
 Route::get('register', 'App\Http\Controllers\AuthController@getRegister') -> name('get_register') -> middleware('guest');
 Route::post('register', 'App\Http\Controllers\AuthController@PostRegister') -> name('register') -> middleware('guest');
@@ -29,6 +28,9 @@ Route::get('logout', 'App\Http\Controllers\AuthController@logout') -> name('logo
 
 Route::get('dokumen/create', 'App\Http\Controllers\DokumenController@createDokumen');
 Route::get('dokumen/delete/{id}', 'App\Http\Controllers\DokumenController@deleteDokumen');
+Route::get('dokumen/updateStatus/{id}', 'App\Http\Controllers\DokumenController@updateStatusDokumen');
+Route::get('dokumen/updateStatus2/{id}', 'App\Http\Controllers\DokumenController@updateStatusDokumen2');
+Route::get('dokumen/detailData/{id}', 'App\Http\Controllers\DokumenController@detailData');
 
 Route::get('edit/profile/{id}', 'App\Http\Controllers\ProfileController@editProfile');
 
@@ -60,7 +62,7 @@ Route::get('admin_home', function () {
     return view('admin/home');
 })->name('admin_home') -> middleware('auth');
 Route::get('admin_profile', function (){
-    return view('client/profile');
+    return view('admin/profile');
 });
 Route::get('admin_skpd', function () {
     return view('admin/skpd');
@@ -71,15 +73,11 @@ Route::get('admin_visi', function () {
 Route::get('admin_buatktp', function () {
     return view('admin/buatktp');
 });
-Route::get('daftar_dokumen', function () {
-    return view('admin/daftar_dokumen');
-});
-Route::get('ktp_selesai', function () {
-    return view('admin/ktp_selesai');
-});
-Route::get('ktp_belum_selesai', function () {
-    return view('admin/ktp_belum_selesai');
-});
 
+Route::get('daftar_dokumen', 'App\Http\Controllers\DokumenController@daftarPengajuan');
+
+Route::get('ktp_selesai', 'App\Http\Controllers\DokumenController@ktpSelesai');
+
+Route::get('ktp_belum_selesai', 'App\Http\Controllers\DokumenController@ktpBelumSelesai');
 // route untuk experiment
 

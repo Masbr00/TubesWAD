@@ -34,7 +34,7 @@
                 <td>{{ $p->created_at }}</td>
                 <td>{{ $p->pengiriman }}</td>
                 <td>{{ $p->status_dokumen }}</td>
-                <td><a href="dokumen/delete/{{ $p->id }}" class="btn btn-danger" onclick="alert('Apakah anda yakin untuk membatalkan pengajuan dokumen ini?');">Batalkan</a></td>
+                <td><a href="dokumen/delete/{{ $p->id }}" class="btn btn-danger" onclick="return confirm('Apakah anda yakin untuk membatalkan pengajuan dokumen ini?');">Batalkan</a></td>
             </tr>
         @endforeach
     </tbody>
