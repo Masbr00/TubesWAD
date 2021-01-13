@@ -28,6 +28,8 @@ Route::post('login', 'App\Http\Controllers\AuthController@postLogin') -> name('l
 Route::get('logout', 'App\Http\Controllers\AuthController@logout') -> name('logout')  -> middleware('auth');
 
 Route::get('dokumen/create', 'App\Http\Controllers\DokumenController@createDokumen');
+Route::get('dokumen/delete/{id}', 'App\Http\Controllers\DokumenController@deleteDokumen');
+
 
 // route untuk client side
 Route::get('home', function () {
@@ -42,9 +44,7 @@ Route::get('visi', function () {
 Route::get('buatktp', function () {
     return view('client/buatktp');
 });
-// Route::get('statusktp', function () {
-//     return view('client/statusktp');
-// });
+
 Route::get('statusktp', 'App\Http\Controllers\DokumenController@statusDokumenPelanggan');
 
 Route::get('profile', function (){

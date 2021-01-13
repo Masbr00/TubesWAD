@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Dokumen;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DokumenController extends Controller
 {
@@ -48,7 +49,14 @@ class DokumenController extends Controller
     }
 
     public function statusDokumenPelanggan(){
-        $status = Dokumen::all();
+        $id = Auth::user()->id;
+        $status = Dokumen::where('id_user', $id)->get();
         return view ('client/statusktp', ['status' => $status]);
+    }
+
+    public function deleteDokumen($id){
+        $hapus = Dokumen::find($id);
+        $hapus->delete();
+        return redirect()->back();
     }
 }
